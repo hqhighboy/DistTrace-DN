@@ -1,0 +1,22 @@
+{
+  "bus_count": 33,
+  "max_voltage_pu": 1.0,
+  "mean_voltage_pu": 0.96,
+  "min_voltage_pu": 0.92,
+  "network": "ieee33_benchmark",
+  "violating_buses": [
+    "bus_22",
+    "bus_23",
+    "bus_24",
+    "bus_25",
+    "bus_26",
+    "bus_27",
+    "bus_28",
+    "bus_29",
+    "bus_30",
+    "bus_31",
+    "bus_32",
+    "bus_33"
+  ],
+  "voltage_violation_count": 12
+}

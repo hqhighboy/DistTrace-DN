@@ -1,0 +1,53 @@
+{
+  "buses": [
+    "bus_01",
+    "bus_02",
+    "bus_03",
+    "bus_04",
+    "bus_05",
+    "bus_06",
+    "bus_07",
+    "bus_08",
+    "bus_09",
+    "bus_10",
+    "bus_11",
+    "bus_12",
+    "bus_13",
+    "bus_14",
+    "bus_15",
+    "bus_16",
+    "bus_17",
+    "bus_18",
+    "bus_19",
+    "bus_20",
+    "bus_21",
+    "bus_22",
+    "bus_23",
+    "bus_24",
+    "bus_25",
+    "bus_26",
+    "bus_27",
+    "bus_28",
+    "bus_29",
+    "bus_30",
+    "bus_31",
+    "bus_32",
+    "bus_33"
+  ],
+  "feeder_type": "radial_benchmark",
+  "line_count": 32,
+  "load_summary": {
+    "load_scale": 1.0,
+    "total_kvar": 2300.0,
+    "total_kw": 3715.0
+  },
+  "name": "ieee33_benchmark",
+  "transformers": [
+    {
+      "capacity_kva": 630,
+      "id": "substation_transformer",
+      "location": "bus_01"
+    }
+  ],
+  "voltage_class_kv": 12.66
+}

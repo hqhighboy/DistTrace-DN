@@ -1,0 +1,35 @@
+DistTrace-DN v1.1.0 release manifest
+
+Required source files:
+README.md
+REPRODUCTION.md
+requirements.txt
+LICENSE
+MANIFEST.txt
+main.py
+configs/ieee33_benchmark.yaml
+configs/engineering_feeder_anon.yaml
+core/__init__.py
+core/model.py
+core/simulation.py
+core/analysis.py
+core/economics.py
+
+Required runtime evidence:
+outputs/demo_v7/network_model.json
+outputs/demo_v7/simulation_results.json
+outputs/demo_v7/analysis.json
+outputs/demo_v7/analysis_summary.json
+outputs/demo_v7/economics_summary.json
+outputs/demo_v7/voltage_profile.csv
+outputs/demo_v7/run_manifest.json
+outputs/demo_v7/logs/run.log
+
+Generated figures:
+figures/generated_artifacts_overview.png
+figures/voltage_profile_v7.png
+
+Documentation:
+docs/reproducibility_metrics.md
+docs/runtime_repair_log_v7.md
+docs/v7_engineering_summary.md

@@ -1,0 +1,8 @@
+{
+  "analysis": "outputs/final_verification/analysis.json",
+  "analysis_summary": "outputs/final_verification/analysis_summary.json",
+  "economics_summary": "outputs/final_verification/economics_summary.json",
+  "network_model": "outputs/final_verification/network_model.json",
+  "simulation_results": "outputs/final_verification/simulation_results.json",
+  "voltage_profile": "outputs/final_verification/voltage_profile.csv"
+}
