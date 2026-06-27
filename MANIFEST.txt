@@ -1,4 +1,4 @@
-DistTrace-DN v1.1.0 release manifest
+DistTrace-DN v1.1.1 release manifest
 
 Required source files:
 README.md
@@ -16,20 +16,19 @@ core/analysis.py
 core/economics.py
 
 Required runtime evidence:
-outputs/demo_v7/network_model.json
-outputs/demo_v7/simulation_results.json
-outputs/demo_v7/analysis.json
-outputs/demo_v7/analysis_summary.json
-outputs/demo_v7/economics_summary.json
-outputs/demo_v7/voltage_profile.csv
-outputs/demo_v7/run_manifest.json
-outputs/demo_v7/logs/run.log
+outputs/demo/network_model.json
+outputs/demo/simulation_results.json
+outputs/demo/analysis.json
+outputs/demo/economics_summary.json
+outputs/demo/voltage_profile.csv
+outputs/demo/run_manifest.json
+outputs/demo/logs/run.log
 
 Generated figures:
 figures/generated_artifacts_overview.png
 figures/voltage_profile_v7.png
 
-Documentation:
+Historical engineering records (not the primary reproduction path):
 docs/reproducibility_metrics.md
 docs/runtime_repair_log_v7.md
 docs/v7_engineering_summary.md

@@ -1,6 +1,6 @@
 # DistTrace-DN
 
-DistTrace-DN is a lightweight research-software package for executable reproducibility, provenance capture, and artifact traceability in distribution-network studies. The repository provides a documented CLI workflow, benchmark configurations, deterministic reviewer outputs, and a protected-data-aware organization pattern suitable for SoftwareX-style software publication.
+DistTrace-DN is a lightweight research-software package for reproducibility-oriented artifact traceability in distribution-network studies. The repository provides a documented CLI workflow, benchmark configurations, deterministic reviewer outputs, execution traceability, and an artifact organization and verification pattern suitable for SoftwareX-style software publication.
 
 ## Project overview
 
@@ -18,14 +18,20 @@ Distribution-network studies often mix public benchmark cases, locally protected
 - `core/simulation.py` runs the deterministic benchmark workflow.
 - `core/analysis.py` summarizes voltage and benchmark indicators.
 - `core/economics.py` computes deterministic economic post-processing indicators.
-- `outputs/demo_v7/` preserves reviewer-visible JSON, CSV, manifest, and log evidence.
+- `outputs/demo/` preserves reviewer-visible JSON, CSV, manifest, and log evidence.
+
+## Simulation Scope and Deterministic Surrogate Model
+
+The primary focus of this package is software workflow reproducibility and lightweight artifact traceability. The IEEE 33-bus example is a minimal benchmark-style configuration for reproducibility demonstration; it is not a complete standard IEEE 33-bus AC power-flow validation case. The `dummy_power_flow` routine generates deterministic surrogate results for artifact generation only. It is not a validated AC power-flow solver and is not presented as numerical validation of power-flow physics.
+
+Similarly, in economic post-processing, the `annualized_equipment_cost` relies on a placeholder fixed coefficient (`4.0` USD/kVA/year) to generate a deterministic penalty for demonstration purposes. This constant is used solely to verify the correct operation of the economics aggregation module. The voltage violation penalty uses an assumed scenario parameter of 1000 USD/violation, which is also a placeholder and not a real-world tariff.
 
 ## Reproducibility workflow
 
 1. Create a clean Python environment.
 2. Install dependencies from `requirements.txt`.
 3. Run the documented CLI command.
-4. Inspect `outputs/demo_v7/run_manifest.json`.
+4. Inspect `outputs/demo/run_manifest.json`.
 5. Compare generated JSON/CSV artifacts with the bundled reference outputs.
 6. Use `docs/reproducibility_metrics.md` and `CHECKSUMS.md5` for verification.
 
@@ -42,7 +48,7 @@ DistTrace-DN/
   main.py
   configs/
   core/
-  outputs/demo_v7/
+  outputs/demo/
   figures/
   docs/
 ```
@@ -58,7 +64,7 @@ pip install -r requirements.txt
 
 python main.py \
   --config configs/ieee33_benchmark.yaml \
-  --output-dir outputs/demo_v7
+  --output-dir outputs/demo
 ```
 
 ### Windows PowerShell
@@ -70,10 +76,10 @@ pip install -r requirements.txt
 
 python main.py `
   --config configs/ieee33_benchmark.yaml `
-  --output-dir outputs/demo_v7
+  --output-dir outputs/demo
 ```
 
-The command writes structured artifacts to `outputs/demo_v7/` and an execution log to `outputs/demo_v7/logs/run.log`.
+The command writes structured artifacts to `outputs/demo/` and an execution log to `outputs/demo/logs/run.log`.
 
 ## Example outputs
 
@@ -82,7 +88,6 @@ The IEEE33 benchmark demo generates:
 - `network_model.json`
 - `simulation_results.json`
 - `analysis.json`
-- `analysis_summary.json`
 - `economics_summary.json`
 - `voltage_profile.csv`
 - `run_manifest.json`
@@ -100,32 +105,28 @@ The release contains public benchmark and anonymized configuration files only. P
 
 ## Release and citation
 
-This package is prepared as release `v1.1.0` for GitHub and Zenodo archival. Cite the archived release once a permanent DOI is minted.
+This package is prepared as release `v1.1.1` for GitHub and Zenodo archival. Cite the archived release at https://doi.org/10.5281/zenodo.20408661
 
 ## Zenodo archival
 
-A permanent DOI will be attached after Zenodo archival of release `v1.1.0`.
+The permanent DOI for release `v1.1.1` is https://doi.org/10.5281/zenodo.20408661
 
 ## License
 
 MIT License. See `LICENSE`.
 
 
-## Supported environment
+## Runtime requirements
 
-Validated with:
-
-- Python 3.11
-- Windows 11
-- Ubuntu 22.04
+- Python 3.10+
+- Dependencies listed in `requirements.txt`
 
 The workflow intentionally uses lightweight dependencies and does not require GPU acceleration.
 
 
 ## Deterministic execution
 
-The bundled IEEE33 benchmark workflow is deterministic.
-Repeated execution with the same configuration yields identical reviewer-visible artifacts and checksum verification results.
+The bundled IEEE33 benchmark workflow generates deterministic JSON and CSV data artifacts for the same configuration. The execution log includes timestamps and is retained as run-specific evidence.
 
 ## Design philosophy
 

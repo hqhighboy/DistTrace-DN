@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the archived release."
 title: "DistTrace-DN: A reproducible distribution-network research software package"
-version: "v1.1.0"
+version: "v1.1.1"
 date-released: "2026-05-26"
 license: "MIT"
 authors:
@@ -10,4 +10,12 @@ authors:
   - family-names: "Wang"
     given-names: "Ximing"
 repository-code: "https://github.com/hqhighboy/reproducible-distribution-network"
-doi: "10.5281/zenodo.TBD"
+doi: "10.5281/zenodo.20408661"
+url: "https://github.com/hqhighboy/reproducible-distribution-network"
+type: software
+abstract: "DistTrace-DN is a lightweight research-software package for reproducibility-oriented artifact traceability and execution traceability in distribution-network studies."
+keywords:
+  - reproducibility
+  - distribution network
+  - power flow
+  - artifact traceability

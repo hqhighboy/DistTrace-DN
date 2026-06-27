@@ -15,5 +15,5 @@ Thumbs.db
 
 logs/
 
-!outputs/demo_v7/logs/
-!outputs/demo_v7/logs/run.log
+!outputs/demo/logs/
+!outputs/demo/logs/run.log

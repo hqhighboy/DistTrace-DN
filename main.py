@@ -188,7 +188,6 @@ def write_outputs(
         "network_model": output_dir / "network_model.json",
         "simulation_results": output_dir / "simulation_results.json",
         "analysis": output_dir / "analysis.json",
-        "analysis_summary": output_dir / "analysis_summary.json",
         "economics_summary": output_dir / "economics_summary.json",
         "voltage_profile": output_dir / "voltage_profile.csv",
         "run_manifest": output_dir / "run_manifest.json",
@@ -197,7 +196,6 @@ def write_outputs(
     write_json(artifacts["network_model"], network.to_dict())
     write_json(artifacts["simulation_results"], simulation_results)
     write_json(artifacts["analysis"], analysis_results)
-    write_json(artifacts["analysis_summary"], analysis_results)
     write_json(artifacts["economics_summary"], economics_results)
     write_voltage_csv(
         artifacts["voltage_profile"],

@@ -26,6 +26,8 @@ def evaluate_economics(
 
     annual_loss_cost = simulation_results["line_losses_kw"] * annual_hours * energy_price
     transformer_capacity = sum(int(item.get("capacity_kva", 0)) for item in network.transformers)
+    # The 4.0 coefficient is a deterministic placeholder cost ($/kVA/year)
+    # used solely to generate repeatable proxy economic metrics for workflow verification.
     annualized_equipment_cost = transformer_capacity * 4.0
 
     summary = {
